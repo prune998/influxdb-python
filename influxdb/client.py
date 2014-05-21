@@ -71,7 +71,7 @@ class InfluxDBClient(object):
         """
         url = "{0}/{1}".format(self._baseurl, url)
 
-        if isinstance(data, dict):
+        if isinstance(data, list):
             data = json.dumps(data)
 
         if params is None:
